@@ -1,5 +1,5 @@
 This is a shipping calculator I created for a Codecademy project. 
-For the project, I used Python functions to help the fictional company, Sal's Shipping, help customers determine the cheapest shipping method. 
+For the project, I used Python functions to assist the fictional company, Sal's Shipping, in helping customers determine the cheapest shipping method. 
 
 The paramters of the shipping prices are as follows:
 <br>
