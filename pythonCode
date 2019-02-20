@@ -1,0 +1,43 @@
+#Calculates the total cost of using grounch shipping
+def groundShipCost(weight):
+  if weight <= 2:
+    return weight*1.5 + 20
+  elif (weight > 2 ) and (weight <=6):
+    return weight*3 + 20
+  elif (weight > 6 ) and (weight <=10):
+    return weight*4 + 20
+  else:
+    return weight*4.75 + 20
+
+#Calculates the total cost of using drone shipping
+def droneShipCost(weight):
+  if weight <= 2:
+    return weight*4.5
+  elif (weight > 2 ) and (weight <=6):
+    return weight*9
+  elif (weight > 6 ) and (weight <=10):
+    return weight*12
+  else:
+    return weight*14.25
+
+#Premium ground shipping flatrate
+premiumGroundShipCost = 125
+
+#Finds the cheapest shipping option for customer
+def cheapestOption(weight):
+  if (groundShipCost(weight) < droneShipCost(weight)) and (groundShipCost(weight) < premiumGroundShipCost):
+    return 'Ground shipping is your cheapest option. It will cost $' + str(groundShipCost(weight))
+  elif (droneShipCost(weight) < groundShipCost(weight)) and (droneShipCost(weight) < premiumGroundShipCost):
+    return 'Drone shipping is your cheapest option. It will cost $' + str(droneShipCost(weight))
+  else:
+    return 'Premium ground shipping is your cheapest option. It will cost $125.'
+  
+  
+#Tests cheapestOption()
+print(cheapestOption(4.8))
+print(cheapestOption(41.5))
+  
+  
+  
+  
+  
